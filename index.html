@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header></header>
+    <main class="mt-5 ml-5 w-[1420px]">
+      <!-- container -->
+      <div class="flex flex-col lg:flex-row grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+        <!-- shape container -->
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 top-5">
+          <!-- first  Card -->
+          <div class="card w-80 bg-base-100 shadow-xl">
+            <figure><img src="/images/triangle.png" alt="" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Triangle</h2>
+              <p>Area (A) = 0.5 x b x h</p>
+              <div>
+                <input type="number" name="" placeholder="base" class="w-20 px-2 base-field" />
+                <span class="ml-3">cm</span>
+                <input type="number" name="" placeholder="hight" class="w-20 px-2 ml-3 hight-field" />
+                <span class="ml-3">cm</span>
+              </div>
+              <p>Area : <span class="area-value px-2"></span> cm</p>
+              <div class="card-actions">
+                <button class="btn triangle-btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!-- ll -->
+          <div class="card w-80 bg-bas-100 shadow-xl">
+            <figure><img class="mt-2" src="/images/rectangle.png" alt="" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Rectangle</h2>
+              <p>Area (A) = w x l</p>
+              <div>
+                <input type="number" name="" placeholder="width" class="w-20 px-2 width-field" />
+                <span class="ml-3">cm</span>
+                <input type="number" name="" placeholder="length" class="w-20 px-2 ml-3 length-field" />
+                <span class="ml-3">cm</span>
+              </div>
+              <p>Area : <span class="rectangle-value px-2"></span> cm</p>
+
+              <div class="card-actions">
+                <button class="btn rectangle-btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-80 bg-base-100 shadow-xl">
+            <figure><img class="mt-5" src="/images/parallelogram.png" alt="" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Parallelogram</h2>
+              <p>Area (A) = b x h</p>
+              <div>
+                <input type="text" name="" placeholder="base" class="w-20 px-2 parallelogram-base" />
+                <span class="ml-3">cm</span>
+                <input type="text" name="" placeholder="hight" class="w-20 px-2 ml-3 parallelogram-hight" />
+                <span class="ml-3">cm</span>
+              </div>
+              <p>Area : <span class="parallelogram-value px-2"></span> cm</p>
+
+              <div class="card-actions">
+                <button class="btn parallelogram-btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-80 bg-base-100 shadow-xl">
+            <figure><img class="mt-5" src="/images/ellipse.png" alt="" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">ellipse</h2>
+              <p>Area (A) =3.1416 ab</p>
+              <div>
+                <input type="text" name="" placeholder="base" class="w-20 px-2 ellipse-major" />
+                <span class="ml-3">cm</span>
+                <input type="text" name="" placeholder="hight" class="w-20 px-2 ml-3 ellipse-minor" />
+                <span class="ml-3">cm</span>
+              </div>
+              <p>Area : <span class="ellipse-value px-2"></span> cm</p>
+              <div class="card-actions">
+                <button onclick="ellips()" class="btn btn-primary ellipse-btn w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="area w-80 min-h-80 bg-white ml-4 font-semibold text-black">
+            <p class="text-black text-center font-bold text-xl">
+              Log <button onclick="clearBtn()" class="btn btn-sm btn-succes bg-red-600 text-white ml">Clear</button>
+            </p>
+            <div class="log-list p-5"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <button onclick="user()">user Id</button>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
